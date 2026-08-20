@@ -1,2 +1,2 @@
-# Recep-o-e-Triagem-Cl-nica
+# Recepco-e-Triagem-Clinica
 Projeto para a disciplina de MODELAGEM E GERENCIAMENTO DE DADOS EM SISTEMAS COMPUTACIONAIS.
