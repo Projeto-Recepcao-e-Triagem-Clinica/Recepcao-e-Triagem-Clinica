@@ -8,5 +8,5 @@ historico_atendimento = []
 especialidades = [
     "Cardiologia",
     "Pediatria",
-    "Fornoaudiologia",
+    "Fonoaudiologia",
 ]
