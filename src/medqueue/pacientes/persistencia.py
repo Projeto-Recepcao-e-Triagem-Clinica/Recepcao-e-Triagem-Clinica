@@ -1,12 +1,10 @@
-#Dados do sistema
-pacientes_db = {}
-
-fila_triagem = []
-
-historico_atendimento = []
-
-especialidades = [
-    "Cardiologia",
-    "Pediatria",
-    "Fonoaudiologia",
-]
+class Persistencia:
+    def __init__(self):
+        self.pacientes_db = {}
+        self.fila_triagem = []
+        self.historico_atendimento = []
+        self.especialidades = [
+            "Cardiologia",
+            "Pediatria",
+            "Fonoaudiologia"
+        ]
