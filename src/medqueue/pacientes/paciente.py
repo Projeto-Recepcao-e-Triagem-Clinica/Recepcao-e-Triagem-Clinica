@@ -45,6 +45,8 @@ def cadastrar_paciente(nome, idade, numero_telefone, e_mail, especialidade):
     print(f"Paciente {nome} cadastrado com sucesso!")
     print(f"ID do paciente: {paciente.id_paciente}")
 
+    return paciente
+
 def buscar_paciente(id_paciente):
 
     if id_paciente in pacientes_db:
