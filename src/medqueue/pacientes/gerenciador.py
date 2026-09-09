@@ -115,17 +115,17 @@ class Gerenciador:
                 print(f"Finalização da consulta do paciente {id_paciente} desfeita.")
 
     def exibir_painel(self):
-        print("\n" + "=" * 50)
-        print("                 PAINEL MEDQUEUE")
-        print("=" * 50)
+        print("\n" + "=" * 49)
+        print("====          PAINEL GERAL MEDQUEUE          ====")
+        print("=" * 49)
 
-        print("\n--- FILA DE TRIAGEM ---")
+        print("\n====    FILA DE TRIAGEM    ====")
         if self.persistencia.fila_triagem:
             print(self.persistencia.fila_triagem)
         else:
             print("Fila vazia.")
 
-        print("\n--- PACIENTES ---")
+        print("\n====    PACIENTES    ====")
         if self.persistencia.pacientes_db:
             for paciente in self.persistencia.pacientes_db.values():
                 print(
@@ -137,15 +137,15 @@ class Gerenciador:
         else:
             print("Nenhum paciente cadastrado.")
 
-        print("\n--- HISTÓRICO ---")
+        print("\n====    HISTÓRICO    ====")
         if self.persistencia.historico_atendimento:
             for acao in self.persistencia.historico_atendimento:
                 print(acao)
         else:
             print("Histórico vazio.")
 
-        print("\n--- ESPECIALIDADES ---")
+        print("\n====    ESPECIALIDADES    ====")
         for especialidade in self.persistencia.especialidades:
             print(f"- {especialidade}")
 
-        print("=" * 50)
+        print("=" * 49)
