@@ -11,16 +11,21 @@ def historico_atendimento():
 
         acao = input("Informe a ação realizada: ")
 
-        registro = (acao, paciente.id_paciente)
+        def registrar_acao(persistencia, acao, id_paciente):
+            registro = (acao, id_paciente)
+            persistencia.historico_atendimento.append(registro)
 
-        historico.append(registro)
 
-        print("\nHistórico registrado com sucesso!")
-        print(f"Paciente: {paciente.nome}")
-        print(f"Ação realizada: {acao}")
-        print(f"ID do paciente: {paciente.id_paciente}")
+        def desfazer_ultima_acao(persistencia):
+            if not persistencia.historico_atendimento:
+                print("Não há ações para desfazer.")
+        return None
 
-    else:
-        print("Paciente não encontrado.")
 
+        return persistencia.historico_atendimento.pop()
+
+    print("\nHistórico registrado com sucesso!")
+    print(f"Paciente: {paciente.nome}")
+    print(f"Ação realizada: {acao}")
+    print(f"ID do paciente: {paciente.id_paciente}")
 
