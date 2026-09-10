@@ -23,27 +23,27 @@ class Gerenciador:
         self.persistencia.especialidades.append(especialidade)
         print("Especialidade adicionada com sucesso.")
 
-    def cadastrar_paciente(self, id_paciente, nome, idade, numero_telefone, e_mail, especialidade):
+    def cadastrar_paciente(self, nome, idade, numero_telefone, e_mail, especialidade):
         if especialidade not in self.persistencia.especialidades:
             print("Especialidade não cadastrada.")
             return
 
-        if id_paciente in self.persistencia.pacientes_db:
-            print("ID do paciente já cadastrado.")
-            return
-
         paciente = Pacientes(
-            id_paciente,
             nome,
             idade,
             numero_telefone,
             e_mail,
             especialidade
         )
+        
+        id_paciente = paciente.id_paciente
 
         dados_paciente = {
             "id": paciente.id_paciente,
             "paciente": paciente.nome,
+            "idade": paciente.idade,
+            "telefone": paciente.numero_telefone,
+            "email": paciente.e_mail,
             "especialidade": paciente.especialidade,
             "status": paciente.status
         }
