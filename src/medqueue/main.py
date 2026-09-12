@@ -26,7 +26,6 @@ def menu():
 
         elif opcao == "2":
             try:
-                id_paciente = int(input("ID do paciente: "))
                 nome = input("Nome do paciente: ").strip()
                 idade = int(input("Idade: "))
                 numero_telefone = input("Telefone: ").strip()
@@ -34,7 +33,6 @@ def menu():
                 especialidade = input("Especialidade: ").strip()
 
                 gerenciador.cadastrar_paciente(
-                    id_paciente,
                     nome,
                     idade,
                     numero_telefone,
