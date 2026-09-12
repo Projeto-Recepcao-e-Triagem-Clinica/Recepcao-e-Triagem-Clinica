@@ -1,3 +1,4 @@
+from paciente import pacientes_db 
 def historico_atendimento():
     id_paciente = input("informe o ID do paciente: ")
 
